@@ -1,5 +1,6 @@
 import { NextPage } from 'next';
 import { projectsData } from '../../data/projects-data';
+import Carousel from './components/carousel';
 import Project from './components/project';
 
 const Projects: NextPage = () => {
@@ -11,9 +12,11 @@ const Projects: NextPage = () => {
       >
         Highlight Projects
       </h2>
-      {projectsData.map((proj, i) => (
-        <Project project={proj} key={i} />
-      ))}
+      <div className="grid grid-cols-1 lg:grid-cols-2">
+        {projectsData.map((proj, i) => (
+          <Project project={proj} key={i} />
+        ))}
+      </div>
     </div>
   );
 };

@@ -39,7 +39,10 @@ const Project: FC<Props> = ({
   },
 }) => {
   return (
-    <div className="max-w-3xl p-8 my-8 shadow-xl rounded-2xl ">
+    <div
+      className="p-3 mx-auto my-8 shadow-xl rounded-2xl"
+      style={{ width: '450px' }}
+    >
       <h3 className="mb-5 text-xl font-bold tracking-wide text-center font-headers">
         {name}
       </h3>
@@ -55,13 +58,13 @@ const Project: FC<Props> = ({
             className="rounded-xl"
           />
         </div>
-        <div className="flex items-center justify-around gap-8 mx-auto ">
+        <div className="flex items-center justify-around m-0 mx-auto gap-x-10">
           {codeUrl && (
             <a
               href={codeUrl}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center px-4 py-2 space-x-3 border-2 rounded-xl"
+              className="flex items-center px-4 py-2 space-x-3 border-2 rounded-xl hover:bg-dark-700 hover:text-whitetxt"
             >
               <AiFillGithub /> <span>Code</span>
             </a>
@@ -71,7 +74,7 @@ const Project: FC<Props> = ({
               href={liveUrl}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center px-4 py-2 space-x-3 border-2 rounded-xl"
+              className="flex items-center px-4 py-2 space-x-3 border-2 rounded-xl hover:bg-dark-500 hover:text-whitetxt"
             >
               <AiFillProject /> <span>Live</span>
             </a>
@@ -79,14 +82,14 @@ const Project: FC<Props> = ({
         </div>
       </div>
       <div className="flex flex-col">
-        <p className="mt-4">{description}</p>
-        <div className="flex justify-center mt-8 gap-x-7">
+        <p className="m-0 mt-4">{description}</p>
+        <div className="flex flex-wrap mt-8 gap-x-7">
           {stack.map((tech, i) => (
             <Image
               src={`/images/${tech.filename}`}
               alt={tech.label}
-              width={tech.width ? tech.width : '100'}
-              height={tech.height ? tech.height : '65'}
+              width={tech.width ? tech.width : '45'}
+              height={tech.height ? tech.height : '45'}
               layout="intrinsic"
               key={i}
             />
