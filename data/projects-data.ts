@@ -1,4 +1,4 @@
-import { IProject } from '../pages/sections/components/project';
+import { IProject } from '../sections/components/project';
 
 export const projectsData: IProject[] = [
   {

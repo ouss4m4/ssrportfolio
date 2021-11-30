@@ -2,10 +2,9 @@ import type { NextPage } from 'next';
 import Image from 'next/image';
 import React from 'react';
 import { BsArrowDownCircle } from 'react-icons/bs';
-import Carousel from './sections/components/carousel';
 
-import Experience from './sections/Experience';
-import Projects from './sections/Projects';
+import Experience from '../sections/Experience';
+import Projects from '../sections/Projects';
 
 const Home: NextPage = () => {
   return (

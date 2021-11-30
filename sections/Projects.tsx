@@ -1,6 +1,5 @@
 import { NextPage } from 'next';
-import { projectsData } from '../../data/projects-data';
-import Carousel from './components/carousel';
+import { projectsData } from '../data/projects-data';
 import Project from './components/project';
 
 const Projects: NextPage = () => {

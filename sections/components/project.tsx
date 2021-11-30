@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { AiFillProject, AiFillGithub } from 'react-icons/ai';
 
 interface IProjectTech {
@@ -39,10 +39,7 @@ const Project: FC<Props> = ({
   },
 }) => {
   return (
-    <div
-      className="p-3 mx-auto my-8 shadow-xl rounded-2xl"
-      style={{ width: '450px' }}
-    >
+    <div className="p-3 mx-auto my-8 rounded-2xl" style={{ width: '450px' }}>
       <h3 className="mb-5 text-xl font-bold tracking-wide text-center font-headers">
         {name}
       </h3>
@@ -83,7 +80,7 @@ const Project: FC<Props> = ({
       </div>
       <div className="flex flex-col">
         <p className="m-0 mt-4">{description}</p>
-        <div className="flex flex-wrap mt-8 gap-x-7">
+        <div className="flex flex-wrap justify-around mt-8 gap-x-7">
           {stack.map((tech, i) => (
             <Image
               src={`/images/${tech.filename}`}
