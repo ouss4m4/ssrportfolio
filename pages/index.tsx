@@ -1,17 +1,20 @@
 import type { NextPage } from 'next';
 import Image from 'next/image';
-import Experience from './components/Experience';
 import { BsArrowDownCircle } from 'react-icons/bs';
+
+import Experience from './sections/Experience';
+import Projects from './sections/Projects';
+
 const Home: NextPage = () => {
   return (
     <>
       <div
-        className="items-center justify-evenly hidden w-screen md:flex md:flex-col bg-dark-500 "
+        className="items-center hidden w-screen justify-evenly md:flex md:flex-col bg-dark-500 "
         style={{ height: '100vh' }}
       >
         <div className="relative w-screen " style={{ height: '56%' }}>
           <Image
-            src="/images/portfolio-lander.jpg"
+            src="/images/lander-optimised.jpeg"
             layout="fill"
             alt="avatar"
             quality="100"
@@ -31,13 +34,14 @@ const Home: NextPage = () => {
           </div>
           <div className="absolute top-0 left-0 z-10 w-full h-full second-overlay"></div>
         </div>
-        <a href="#experience">
+        <a href="#experience" className="text-white">
           <BsArrowDownCircle className="w-12 h-12 " />
         </a>
       </div>
 
       <div>
         <Experience />
+        <Projects />
       </div>
     </>
   );
