@@ -9,9 +9,9 @@ const Projects: NextPage = () => {
         id="projects"
         className="pt-8 mb-8 text-4xl font-bold tracking-wider font-lines"
       >
-        Highlight Projects
+        Github Projects
       </h2>
-      <div className="grid grid-cols-1 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-x-10 gap-y-24 lg:grid-cols-2">
         {projectsData.map((proj, i) => (
           <Project project={proj} key={i} />
         ))}

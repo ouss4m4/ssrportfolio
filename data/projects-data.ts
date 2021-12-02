@@ -16,7 +16,6 @@ export const projectsData: IProject[] = [
       { filename: 'node-logo.svg', label: 'NodeJs' },
       { filename: 'material-ui-logo.svg', label: 'Material UI' },
     ],
-    width: '120',
   },
   {
     name: 'Angular .Net Store',
@@ -33,6 +32,36 @@ export const projectsData: IProject[] = [
       { filename: 'angular-logo.svg', label: 'Angular' },
       { filename: 'stripe.svg', label: 'Stripe' },
       { filename: 'azure-logo.svg', label: 'Azure', width: 120 },
+    ],
+  },
+  {
+    name: 'Sales Order Manager',
+    liveUrl: 'https://salesorder-app.azurewebsites.net/',
+    codeUrl: 'https://github.com/ouss4m4/sales-order',
+    description:
+      'Enterprise like application to create sales orders, And manage clients and procuts. API developed by .Net Core 6, with Role based authorization, Microsoft SQLServer for the database, ORM Entity Framework,',
+    imageName: 'salesorder.png',
+    imageLabel: 'Sales Order',
+    stack: [
+      { filename: 'netcore.svg', label: '.Net Core' },
+      { filename: 'ms-sql-logo.svg', label: 'SqlServer' },
+      { filename: 'react-logo.svg', label: 'React' },
+      { filename: 'ts-logo.svg', label: 'TypeScript' },
+      { filename: 'azure-logo.svg', label: 'Azure', width: 120 },
+    ],
+  },
+  {
+    name: 'Tournament Tracker',
+    description:
+      'Desktop app built with WinForms on .NetCore to create players add them to teams, create tournaments using these teams and rewards, depending on number of starting teams,assign BYEs and rounds ',
+    imageName: 'tournament-tracker.png',
+    imageLabel: 'Tournament Tracker',
+    codeUrl: 'https://github.com/ouss4m4/TournamentTracker',
+    liveUrl: null,
+    stack: [
+      { filename: 'c--4.svg', label: 'C sharp' },
+      { filename: 'netcore.svg', label: '.Net Core' },
+      { filename: 'ms-sql-logo.svg', label: 'SqlServer' },
     ],
   },
   {
@@ -67,36 +96,7 @@ export const projectsData: IProject[] = [
       { filename: 'netlify-logo.svg', label: 'Netlify' },
     ],
   },
-  {
-    name: 'Sales Order Manager',
-    liveUrl: 'https://salesorder-app.azurewebsites.net/',
-    codeUrl: 'https://github.com/ouss4m4/sales-order',
-    description:
-      'WebApp to create SalesOrders for clients. Built from scratch with Net Core and React. Deployed at Azure',
-    imageName: 'salesorder.png',
-    imageLabel: 'Sales Order',
-    stack: [
-      { filename: 'netcore.svg', label: '.Net Core' },
-      { filename: 'ms-sql-logo.svg', label: 'SqlServer' },
-      { filename: 'react-logo.svg', label: 'React' },
-      { filename: 'ts-logo.svg', label: 'TypeScript' },
-      { filename: 'azure-logo.svg', label: 'Azure', width: 120 },
-    ],
-  },
-  {
-    name: 'Tournament Tracker',
-    description:
-      'Desktop app built with WinForms on .NetCore to create players add them to teams, create tournaments using these teams and rewards, depending on number of starting teams,assign BYEs and rounds ',
-    imageName: 'tournament-tracker.png',
-    imageLabel: 'Tournament Tracker',
-    codeUrl: 'https://github.com/ouss4m4/TournamentTracker',
-    liveUrl: null,
-    stack: [
-      { filename: 'c--4.svg', label: 'C sharp' },
-      { filename: 'netcore.svg', label: '.Net Core' },
-      { filename: 'ms-sql-logo.svg', label: 'SqlServer' },
-    ],
-  },
+
   {
     name: 'K8S MicroServices API',
     description:
