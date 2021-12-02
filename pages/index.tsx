@@ -40,10 +40,8 @@ const Home: NextPage = () => {
         </a>
       </div>
 
-      <div>
-        <Experience />
-        <Projects />
-      </div>
+      <Experience />
+      <Projects />
     </>
   );
 };
