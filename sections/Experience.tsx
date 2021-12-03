@@ -20,7 +20,7 @@ const polygon = (direction: 'left' | 'right', bg?: string): CSS.Properties => ({
 
 const Experience: NextPage = () => {
   return (
-    <div className="container min-h-screen px-2 mx-auto bg-white font-lines max-w-7xl">
+    <section className="container min-h-screen px-2 mx-auto bg-white font-lines max-w-7xl">
       <h2
         id="experience"
         className="pt-8 mb-8 text-4xl font-bold tracking-wider font-lines"
@@ -247,7 +247,7 @@ const Experience: NextPage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

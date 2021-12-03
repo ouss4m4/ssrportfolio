@@ -5,11 +5,12 @@ import { BsArrowDownCircle } from 'react-icons/bs';
 
 import Experience from '../sections/Experience';
 import Projects from '../sections/Projects';
+import Skills from '../sections/Skills';
 
 const Home: NextPage = () => {
   return (
     <>
-      <div
+      <section
         className="items-center hidden w-screen justify-evenly md:flex md:flex-col bg-dark-500 "
         style={{ height: '100vh' }}
       >
@@ -38,10 +39,11 @@ const Home: NextPage = () => {
         <a href="#experience" className="text-white">
           <BsArrowDownCircle className="w-12 h-12 " />
         </a>
-      </div>
+      </section>
 
       <Experience />
       <Projects />
+      <Skills />
     </>
   );
 };
