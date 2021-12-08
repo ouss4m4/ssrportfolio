@@ -39,7 +39,7 @@ const Project: FC<Props> = ({
   },
 }) => {
   return (
-    <div className="flex flex-col max-w-lg p-4 mx-auto overflow-hidden shadow-md">
+    <div className="flex flex-col max-w-lg p-4 mx-auto overflow-hidden shadow-md" styles={{minHeight: '450px'}}>
       <h3 className="mb-2 text-xl font-bold tracking-wide text-center font-headers">
         {name}
       </h3>
@@ -49,9 +49,10 @@ const Project: FC<Props> = ({
             src={`/images/${imageName}`}
             alt={imageLabel}
             width={width ? width : '650'}
-            height={height ? height : '350'}
+            height={height ? height : '500'}
             layout="intrinsic"
             quality="100"
+            
           />
           <div className="flex items-center justify-around max-w-sm m-0 mx-auto">
             {codeUrl && (

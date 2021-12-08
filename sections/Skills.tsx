@@ -4,11 +4,11 @@ const Skills: NextPage = () => {
   return (
     <section
       id="skills"
-      className="container max-w-6xl px-2 mx-auto mt-8 font-lines"
+      className="container max-w-6xl px-2 mx-auto mt-8 font-lines lg:min-h-screen"
     >
       <h2
         id="projects"
-        className="pt-8 mb-8 text-4xl font-bold tracking-wider font-lines"
+        className="pt-8 mb-12 text-4xl font-bold tracking-wider font-lines text-center"
       >
         My Skills
       </h2>
