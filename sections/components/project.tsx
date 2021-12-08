@@ -39,7 +39,7 @@ const Project: FC<Props> = ({
   },
 }) => {
   return (
-    <div className="flex flex-col max-w-lg p-4 mx-auto overflow-hidden shadow-md" styles={{minHeight: '450px'}}>
+    <div className="flex flex-col max-w-lg p-4 mx-auto overflow-hidden shadow-md" >
       <h3 className="mb-2 text-xl font-bold tracking-wide text-center font-headers">
         {name}
       </h3>
