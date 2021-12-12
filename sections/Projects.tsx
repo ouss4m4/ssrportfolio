@@ -1,13 +1,16 @@
-import { NextPage } from 'next';
-import { projectsData } from '../data/projects-data';
-import Project from './components/project';
+import { NextPage } from "next";
+import { projectsData } from "../data/projects-data";
+import Project from "./components/project";
 
 const Projects: NextPage = () => {
   return (
-    <div className="container min-h-screen px-2 mx-auto bg-white font-lines max-w-7xl">
+    <section
+      style={{ background: "#fafafa" }}
+      className=" px-2 mx-auto bg-white font-lines "
+    >
       <h2
         id="projects"
-        className="pt-8 mb-12 text-4xl font-bold tracking-wider font-lines text-center"
+        className="pt-8 mt-20 mb-12 text-4xl font-bold tracking-wider font-lines text-center"
       >
         Open Source Projects
       </h2>
@@ -16,7 +19,7 @@ const Projects: NextPage = () => {
           <Project project={proj} key={i} />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
