@@ -58,18 +58,7 @@ export const projectsData: IProject[] = [
     liveUrl: null,
     stack: [TechsInfo.csharp, TechsInfo.dotnet, TechsInfo.sqlserver],
   },
-  {
-    name: "Task Manager",
-    description:
-      "Drag n Drop Task manager with persistance done in react deployed with Amazon Amplify",
-    liveUrl: "https://master.d3e64dmv8w4bbk.amplifyapp.com/",
-    codeUrl: "https://github.com/ouss4m4/Task-tracker",
-    imageName: "taskmanager.png",
-    imageLabel: "Task Manager",
-    stack: [TechsInfo.react, TechsInfo.rxjs, TechsInfo.netlify, TechsInfo.node],
-    width: "890",
-    height: "560",
-  },
+
   {
     name: "Reactive Programming",
     description:
@@ -110,5 +99,17 @@ export const projectsData: IProject[] = [
       TechsInfo.mongodb,
       TechsInfo.azure,
     ],
+  },
+  {
+    name: "Task Manager",
+    description:
+      "Drag n Drop Task manager with persistance done in react deployed with Amazon Amplify",
+    liveUrl: "https://master.d3e64dmv8w4bbk.amplifyapp.com/",
+    codeUrl: "https://github.com/ouss4m4/Task-tracker",
+    imageName: "taskmanager.png",
+    imageLabel: "Task Manager",
+    stack: [TechsInfo.react, TechsInfo.rxjs, TechsInfo.netlify, TechsInfo.node],
+    width: "890",
+    height: "560",
   },
 ];

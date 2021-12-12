@@ -1,13 +1,10 @@
-import { NextPage } from 'next';
+import { NextPage } from "next";
 
 const Skills: NextPage = () => {
   return (
-    <section
-      id="skills"
-      className="container max-w-6xl px-2 mx-auto mt-8 font-lines lg:min-h-screen"
-    >
+    <section className="container max-w-6xl px-2 mx-auto mt-8 font-lines ">
       <h2
-        id="projects"
+        id="skills"
         className="pt-8 mb-12 text-4xl font-bold tracking-wider font-lines text-center"
       >
         My Skills
@@ -38,14 +35,14 @@ const Skills: NextPage = () => {
             Time Management
           </h3>
           <p className="max-w-md mx-auto">
-            My team uses{' '}
+            My team uses{" "}
             <a
               href="https://www.atlassian.com/software/jira"
               rel="noreferrer"
               target="_blank"
             >
               JIRA®
-            </a>{' '}
+            </a>{" "}
             to Plan, track, and manage Software development. Creating sprints
             and releases. assigning tasks and delegating projects taught me the
             importance of time.

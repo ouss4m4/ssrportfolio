@@ -16,7 +16,7 @@ const Experience: NextPage = () => {
   return (
     <section
       className=" mx-auto bg-white font-lines"
-      style={{ background: "#f2f2f2" }}
+      style={{ background: "#fefefe" }}
     >
       <div className="px-8 text-center">
         <h2
@@ -42,10 +42,10 @@ const Experience: NextPage = () => {
           </a>
           <span className="tracking-wider">@PharmaInvest SPA</span>
         </div>
-        <p className="text-center max-w-lg mx-auto">
+        <p className="text-center text-xl pb-4 max-w-lg mx-auto">
           As the developers team leader, i am responsibe on creating,
           maintaining, and promoting the use of digital solutions to help the
-          company on its mission towards digital transformation.
+          company on its mission towards Digital transformation.
         </p>
       </div>
 
@@ -58,6 +58,7 @@ const Experience: NextPage = () => {
           TechsInfo.nativescript,
           TechsInfo.angular,
           TechsInfo.node,
+          TechsInfo.websocket,
           TechsInfo.sap,
         ]}
       >
@@ -69,12 +70,12 @@ const Experience: NextPage = () => {
             I Developed and published a
             <strong> cross-platform mobile app</strong> that allows customers to
             create purchase orders and monitor their progress. as well as
-            invoices and payment papers
+            invoices and payment documents.
           </li>
           <li className="mt-4">
             To ensure a synchronized ordering experience from multiple devices,
             I deployed a <strong>website</strong> connected to the same
-            <strong>API</strong> as the mobile <b>app</b> through web socket
+            <strong> API </strong> as the mobile <b>app</b> through web socket
           </li>
         </ul>
       </Achievement>
@@ -100,6 +101,11 @@ const Experience: NextPage = () => {
             using a modern web app -PWA- with a customized UX/UI designed to
             expedite the ordering process.
           </li>
+          <li className="mt-4">
+            Users are not constrained by warehouses location anymore, I
+            automated the order separation before the checkout process. and each
+            warehouse receive the corresponding order
+          </li>
         </ul>
       </Achievement>
 
@@ -108,7 +114,6 @@ const Experience: NextPage = () => {
         imgLabel="Picking and Packing Dashboard"
         direction="left"
         tech={[
-          TechsInfo.websocket,
           TechsInfo.electron,
           TechsInfo.angular,
           TechsInfo.sap,
@@ -121,9 +126,9 @@ const Experience: NextPage = () => {
         <ul className="px-6 text-lg tracking-wide list-disc list-inside font-lines">
           <li className="mt-4">
             We automated the invoicing and printing process by creating a
-            desktop software that connected to an API developed on top of SAP B1
-            Service Layer.
-          </li>
+            desktop software that connected to an API implemented on top of SAP
+            B1 Service Layer.
+          </li>{" "}
         </ul>
       </Achievement>
     </section>

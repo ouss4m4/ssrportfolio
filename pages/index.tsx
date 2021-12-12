@@ -20,6 +20,7 @@ import { GoLocation } from "react-icons/go";
 import Experience from "../sections/Experience";
 import Projects from "../sections/Projects";
 import Skills from "../sections/Skills";
+import Technologies from "../sections/Technologies";
 
 const Home: NextPage = () => {
   return (
@@ -52,7 +53,7 @@ const Home: NextPage = () => {
         {/* lg:socials */}
         <div
           className="hidden md:block py-12 xl:py-6"
-          style={{ background: "#fbfbfb" }}
+          style={{ background: "#f1f1f1" }}
         >
           <div className=" flex max-w-6xl justify-evenly mx-auto  align-top h-full mb-14 pt-16">
             <div>
@@ -65,14 +66,7 @@ const Home: NextPage = () => {
                 <BsGithub className="w-14 h-14 md:w-20 md:h-20 " />
               </a>
             </div>
-            <div>
-              <a
-                href="#experience"
-                className="hidden xl:inline-block self-end mt-32"
-              >
-                <BsArrowDownCircle className="w-14 h-14  " />
-              </a>
-            </div>
+
             <div>
               <a href="#">
                 <BsTwitter className="w-14 h-14 md:w-20 md:h-20 " />
@@ -83,6 +77,11 @@ const Home: NextPage = () => {
                 <SiGmail className="w-14 h-14 md:w-20 md:h-20 " />
               </a>
             </div>
+          </div>
+          <div className="hidden xl:flex justify-center items-center">
+            <a href="#experience" className="block">
+              <BsArrowDownCircle className="w-14 h-14" />
+            </a>
           </div>
         </div>
         {/* sm:lander */}
@@ -166,6 +165,7 @@ const Home: NextPage = () => {
       <Experience />
       <Projects />
       <Skills />
+      <Technologies />
     </>
   );
 };

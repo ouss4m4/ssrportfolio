@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import { FC } from 'react';
-import { AiFillProject, AiFillGithub } from 'react-icons/ai';
+import Image from "next/image";
+import { FC } from "react";
+import { AiFillProject, AiFillGithub } from "react-icons/ai";
 
 interface IProjectTech {
   width?: number;
@@ -39,7 +39,10 @@ const Project: FC<Props> = ({
   },
 }) => {
   return (
-    <div className="flex flex-col max-w-lg p-4 mx-auto overflow-hidden shadow-md" >
+    <div
+      className="flex flex-col max-w-lg p-4 mx-auto overflow-hidden shadow-md"
+      style={{ background: "#f7f7f7" }}
+    >
       <h3 className="mb-2 text-xl font-bold tracking-wide text-center font-headers">
         {name}
       </h3>
@@ -48,11 +51,10 @@ const Project: FC<Props> = ({
           <Image
             src={`/images/${imageName}`}
             alt={imageLabel}
-            width={width ? width : '650'}
-            height={height ? height : '500'}
+            width={width ? width : "650"}
+            height={height ? height : "500"}
             layout="intrinsic"
             quality="100"
-            
           />
           <div className="flex items-center justify-around max-w-sm m-0 mx-auto">
             {codeUrl && (
@@ -78,29 +80,15 @@ const Project: FC<Props> = ({
           </div>
         </div>
       </div>
-      {/* <div className="flex flex-col gap-4">
-        <div className="m-2 border-2 border-gray-100 rounded-md">
-          <Image
-            src={`/images/${imageName}`}
-            alt={imageLabel}
-            width={width ? width : '220'}
-            height={height ? height : '100'}
-            layout="responsive"
-            quality="100"
-            className="rounded-xl"
-          />
-        </div>
-        
-      </div> */}
       <div className="flex flex-col ">
-        <p className="p-4 m-0">{description}</p>
+        <p className="p-4 m-0 font-lines">{description}</p>
         <div className="flex flex-wrap justify-around ">
           {stack.map((tech, i) => (
             <Image
               src={`/images/${tech.filename}`}
               alt={tech.label}
-              width={tech.width ? tech.width : '60'}
-              height={tech.height ? tech.height : '60'}
+              width={tech.width ? tech.width : "60"}
+              height={tech.height ? tech.height : "60"}
               layout="intrinsic"
               key={i}
             />
