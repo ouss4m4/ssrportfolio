@@ -33,7 +33,7 @@ const Experience: NextPage = () => {
           <span className="tracking-wider">@PharmaInvest SPA</span>
         </div>
         <p className="max-w-lg pb-4 mx-auto text-xl text-center">
-          As the developers team leader, i am responsibe on creating,
+          As the developers team leader, i am responsible on creating,
           maintaining, and promoting the use of digital solutions to help the
           company on its mission towards Digital transformation.
         </p>
@@ -43,7 +43,7 @@ const Experience: NextPage = () => {
       <Achievement
         direction="left"
         imgSrc="public-app.png"
-        imgLabel="harma Invest Mobile App"
+        imgLabel="Pharma Invest Mobile App"
         tech={[
           TechsInfo.nativescript,
           TechsInfo.angular,
@@ -111,7 +111,7 @@ const Experience: NextPage = () => {
         ]}
       >
         <h3 className="text-xl font-bold tracking-wide text-center font-headers">
-          Shipping and Distibution
+          Shipping and Distribution
         </h3>
         <ul className="px-6 text-lg tracking-wide list-disc list-inside font-lines">
           <li className="mt-4">

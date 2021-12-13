@@ -25,6 +25,8 @@ import Technologies from "../sections/Tools";
 import Footer from "../sections/Footer";
 
 const Home: NextPage = () => {
+  const resumeUrl =
+    "https://drive.google.com/file/d/1VMg2f8nGgkrNJIL24TRnvim1lFY_FgCp/view?usp=sharing";
   return (
     <>
       <section className="pb-2" id="top">
@@ -80,11 +82,7 @@ const Home: NextPage = () => {
               <span className="tooltiptext">Github</span>
             </div>
             <div className="relative tooltip">
-              <a
-                href="https://drive.google.com/file/d/1uzQ5KZfsOw6u7q9iwO8Jnnyti4mwSaFA/view"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href={resumeUrl} target="_blank" rel="noreferrer">
                 <GrDocumentPdf className="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 " />
               </a>
               <span className="tooltiptext">My Resume</span>
@@ -138,7 +136,7 @@ const Home: NextPage = () => {
             </p>
             <a
               className="flex items-center justify-center max-w-md px-2 py-1 mx-auto my-3 text-lg font-medium rounded-full bg-dark-700"
-              href="https://drive.google.com/file/d/1uzQ5KZfsOw6u7q9iwO8Jnnyti4mwSaFA/view?usp=sharing"
+              href={resumeUrl}
               target="_blank"
               rel="noreferrer"
             >
