@@ -21,11 +21,12 @@ import Experience from "../sections/Experience";
 import Projects from "../sections/Projects";
 import Skills from "../sections/Skills";
 import Technologies from "../sections/Tools";
+import Footer from "../sections/Footer";
 
 const Home: NextPage = () => {
   return (
     <>
-      <section className="pb-2">
+      <section className="pb-2" id="top">
         {/* lg:lander */}
         <div className="relative hidden w-screen shadow-xl md:block">
           <Image
@@ -57,23 +58,39 @@ const Home: NextPage = () => {
         >
           <div className="flex max-w-6xl py-6 mx-auto align-top xl:mb-10 lg:py-9 xl:pt-14 justify-evenly">
             <div>
-              <a href="#">
+              <a
+                href="https://www.linkedin.com/in/bzouss/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <BsLinkedin className="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 " />
               </a>
             </div>
             <div>
-              <a href="#">
+              <a
+                href="https://github.com/ouss4m4"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <BsGithub className="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 " />
               </a>
             </div>
 
             <div>
-              <a href="#">
+              <a
+                href="https://twitter.com/0uss4m4"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <BsTwitter className="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 " />
               </a>
             </div>
             <div>
-              <a href="#">
+              <a
+                href="mailto:bz.oussama@gmail.com"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <SiGmail className="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 " />
               </a>
             </div>
@@ -166,6 +183,7 @@ const Home: NextPage = () => {
       <Projects />
       <Skills />
       <Technologies />
+      <Footer />
     </>
   );
 };

@@ -3,6 +3,7 @@ import { NextPage } from "next";
 import TechsInfo, { IStack } from "../data/techsinfo";
 import Image from "next/image";
 import ToolsNavbar from "./components/toolsnav";
+import TechImage from "./components/techimage";
 
 const Technologies: NextPage = () => {
   const techList = Object.values(TechsInfo);
@@ -39,17 +40,17 @@ const Technologies: NextPage = () => {
       </p>
       <ToolsNavbar handleFiltering={handleFiltering} active={active} />
       <div className="grid grid-cols-3 gap-8 h-96">
-        {tools.map(({ filename, label, height, width }) => (
+        {tools.map(({ filename, label, height, width, stack }) => (
           <div
             key={filename}
             className="flex flex-col items-center justify-center"
           >
-            <Image
-              src={`/images/${filename}`}
-              alt={label}
-              height={height ? height : "90"}
-              width={width ? width : "90"}
-              layout="intrinsic"
+            <TechImage
+              filename={filename}
+              label={label}
+              height={height ? height : 95}
+              width={width ? width : 95}
+              stack={stack}
             />
           </div>
         ))}

@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { Properties } from "csstype";
 import { Children, FC } from "react";
+import TechImage from "./techimage";
+import { ITech } from "../../data/techsinfo";
 
 const polygon = (left: boolean, bg?: string): Properties => ({
   width: "23%",
@@ -9,18 +11,12 @@ const polygon = (left: boolean, bg?: string): Properties => ({
   borderRadius: left ? "0 33% 33% 0" : "33% 0 0 33%",
   float: left ? "left" : "right",
 });
-interface IProjectTech {
-  width?: number;
-  height?: number;
-  label: string;
-  filename: string;
-}
 
 interface IAchievement {
   imgSrc: string;
   imgLabel: string;
   direction: string;
-  tech: IProjectTech[];
+  tech: ITech[];
 }
 
 const Achievement: FC<IAchievement> = ({
@@ -54,14 +50,14 @@ const Achievement: FC<IAchievement> = ({
       <div className="z-10 max-w-sm lg:max-w-lg">
         {children}
         <div>
-          <div className="flex gap-x-5 mt-6 justify-center ">
-            {tech.map(({ filename, label, height, width }) => (
-              <Image
-                src={`/images/${filename}`}
-                alt={label}
-                width={width ? width : "65"}
-                height={height ? height : "65"}
-                layout="intrinsic"
+          <div className="flex justify-center mt-6 gap-x-5 ">
+            {tech.map(({ filename, label, height, width, stack }) => (
+              <TechImage
+                filename={filename}
+                label={label}
+                height={height ? height : 80}
+                width={width ? width : 80}
+                stack={stack}
                 key={filename}
               />
             ))}

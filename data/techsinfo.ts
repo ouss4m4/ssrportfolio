@@ -1,4 +1,4 @@
-interface ITech {
+export interface ITech {
   filename: string;
   label: string;
   stack: IStack[];

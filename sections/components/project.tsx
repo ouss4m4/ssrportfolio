@@ -1,20 +1,15 @@
 import Image from "next/image";
 import { FC } from "react";
 import { AiFillProject, AiFillGithub } from "react-icons/ai";
-
-interface IProjectTech {
-  width?: number;
-  height?: number;
-  label: string;
-  filename: string;
-}
+import { ITech } from "../../data/techsinfo";
+import TechImage from "./techimage";
 
 export interface IProject {
   name: string;
   imageName: string;
   imageLabel: string;
   description: string;
-  stack: IProjectTech[];
+  stack: ITech[];
   width?: string;
   height?: string;
   liveUrl: string | null;
@@ -83,14 +78,14 @@ const Project: FC<Props> = ({
       <div className="flex flex-col ">
         <p className="p-4 m-0 font-lines">{description}</p>
         <div className="flex flex-wrap justify-around ">
-          {stack.map((tech, i) => (
-            <Image
-              src={`/images/${tech.filename}`}
-              alt={tech.label}
-              width={tech.width ? tech.width : "60"}
-              height={tech.height ? tech.height : "60"}
-              layout="intrinsic"
-              key={i}
+          {stack.map(({ filename, label, stack, height, width }, i) => (
+            <TechImage
+              filename={filename}
+              label={label}
+              height={height}
+              width={width}
+              stack={stack}
+              key={filename}
             />
           ))}
         </div>
