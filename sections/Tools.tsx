@@ -22,23 +22,23 @@ const Technologies: NextPage = () => {
     handleFiltering("Frontend");
   }, []);
   return (
-    <section className="container max-w-6xl px-2 mx-auto mt-8 font-lines ">
+    <section className="container max-w-6xl px-2 mx-auto mt-8 font-lines">
       <h2
         id="tools"
-        className="pt-8 mb-12 text-4xl font-bold tracking-wider font-lines text-center"
+        className="pt-8 mb-12 text-4xl font-bold tracking-wider text-center font-headers"
       >
         Tools
       </h2>
-      <p className="text-center text-lg pb-2 max-w-lg mx-auto">
+      {/* <p className="max-w-lg pb-2 mx-auto text-lg text-center">
         A good software engineer understands that programming languages and
         frameworks are just tools to help in problem solving and daily
         challenges.
-      </p>
-      <p className="text-center text-lg  max-w-lg mx-auto">
+      </p> */}
+      <p className="max-w-lg mx-auto text-lg text-center">
         Below are the tools i always opt for but i am not limited to.{" "}
       </p>
       <ToolsNavbar handleFiltering={handleFiltering} active={active} />
-      <div className="grid grid-cols-3 gap-x-6 gap-y-12">
+      <div className="grid grid-cols-3 gap-8 h-96">
         {tools.map(({ filename, label, height, width }) => (
           <div
             key={filename}

@@ -1,27 +1,17 @@
 import { NextPage } from "next";
-import Image from "next/image";
-import { Properties } from "csstype";
 import Achievement from "./components/achievement";
 import TechsInfo from "../data/techsinfo";
-
-const polygon = (direction: "left" | "right", bg?: string): Properties => ({
-  width: "33%",
-  height: "100%",
-  background: bg ? bg : "rgb(99 110 143)",
-  borderRadius: direction === "left" ? "0 20% 20% 0" : "20% 0 0 20%",
-  float: direction === "left" ? "left" : "right",
-});
 
 const Experience: NextPage = () => {
   return (
     <section
-      className=" mx-auto bg-white font-lines"
+      className="mx-auto bg-white font-lines"
       style={{ background: "#fefefe" }}
     >
       <div className="px-8 text-center">
         <h2
           id="experience"
-          className="py-8 text-4xl font-bold tracking-wider font-headers text-center"
+          className="py-8 text-4xl font-bold tracking-wider text-center font-headers"
         >
           Professional Experience
         </h2>
@@ -29,7 +19,7 @@ const Experience: NextPage = () => {
         <h3 className="mt-2 text-2xl font-bold tracking-wider font-headers">
           Lead Software Developer
         </h3>
-        <div className="flex flex-col md:flex-row items-center justify-center max-w-lg mb-6 mx-auto">
+        <div className="flex flex-col items-center justify-center max-w-lg mx-auto mb-6 md:flex-row">
           <a
             href="https://www.linkedin.com/company/pharmainvestspa"
             target="_blank"
@@ -42,7 +32,7 @@ const Experience: NextPage = () => {
           </a>
           <span className="tracking-wider">@PharmaInvest SPA</span>
         </div>
-        <p className="text-center text-xl pb-4 max-w-lg mx-auto">
+        <p className="max-w-lg pb-4 mx-auto text-xl text-center">
           As the developers team leader, i am responsibe on creating,
           maintaining, and promoting the use of digital solutions to help the
           company on its mission towards Digital transformation.

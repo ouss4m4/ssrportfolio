@@ -20,14 +20,14 @@ import { GoLocation } from "react-icons/go";
 import Experience from "../sections/Experience";
 import Projects from "../sections/Projects";
 import Skills from "../sections/Skills";
-import Technologies from "../sections/Technologies";
+import Technologies from "../sections/Tools";
 
 const Home: NextPage = () => {
   return (
     <>
-      <section>
+      <section className="pb-2">
         {/* lg:lander */}
-        <div className="hidden md:block relative w-screen ">
+        <div className="relative hidden w-screen shadow-xl md:block">
           <Image
             src="/images/lander-optimised.jpeg"
             layout="responsive"
@@ -36,9 +36,9 @@ const Home: NextPage = () => {
             width="1920"
             height="548"
           />
-          <div className="absolute top-16 left-24 z-20 lg:h-full lg:top-0 lg:left-20 ">
-            <div className="flex flex-col  h-full lg:justify-center gap-y-2 lg:gap-y-8">
-              <h1 className=" text-white md:text-3xl lg:text-5xl font-lines">
+          <div className="absolute z-20 top-16 left-24 lg:h-full lg:top-0 lg:left-20 ">
+            <div className="flex flex-col h-full lg:justify-center gap-y-2 lg:gap-y-8">
+              <h1 className="text-white md:text-3xl lg:text-5xl font-lines">
                 Oussama Baaziz
                 {/* <span className="font-kaushan text-accent">Oussama</span> */}
               </h1>
@@ -52,33 +52,33 @@ const Home: NextPage = () => {
         </div>
         {/* lg:socials */}
         <div
-          className="hidden md:block py-12 xl:py-6"
+          className="hidden py-2 shadow-md md:block "
           style={{ background: "#f1f1f1" }}
         >
-          <div className=" flex max-w-6xl justify-evenly mx-auto  align-top h-full mb-14 pt-16">
+          <div className="flex max-w-6xl py-6 mx-auto align-top xl:mb-10 lg:py-9 xl:pt-14 justify-evenly">
             <div>
               <a href="#">
-                <BsLinkedin className="w-14 h-14 md:w-20 md:h-20 " />
+                <BsLinkedin className="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 " />
               </a>
             </div>
             <div>
               <a href="#">
-                <BsGithub className="w-14 h-14 md:w-20 md:h-20 " />
+                <BsGithub className="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 " />
               </a>
             </div>
 
             <div>
               <a href="#">
-                <BsTwitter className="w-14 h-14 md:w-20 md:h-20 " />
+                <BsTwitter className="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 " />
               </a>
             </div>
             <div>
               <a href="#">
-                <SiGmail className="w-14 h-14 md:w-20 md:h-20 " />
+                <SiGmail className="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 " />
               </a>
             </div>
           </div>
-          <div className="hidden xl:flex justify-center items-center">
+          <div className="items-center justify-center hidden xl:flex mb-11">
             <a href="#experience" className="block">
               <BsArrowDownCircle className="w-14 h-14" />
             </a>
@@ -97,14 +97,14 @@ const Home: NextPage = () => {
               {/*  <div className="absolute top-0 left-0 z-10 w-full h-full second-overlay"></div>
               <div className="absolute top-0 left-0 z-10 w-full h-full hero-overlay"></div> */}
             </div>
-            <h3 className="text-4xl py-6 font-medium tracking-wider font-headers text-center max-w-md mx-auto">
+            <h3 className="max-w-md py-6 mx-auto text-4xl font-medium tracking-wider text-center font-headers">
               Oussama Baaziz
             </h3>
-            <p className="px-2 py-1 my-3 text-lg text-center font-bold tracking-wider rounded-full max-w-md mx-auto bg-dark-700 font-headers">
+            <p className="max-w-md px-2 py-1 mx-auto my-3 text-lg font-bold tracking-wider text-center rounded-full bg-dark-700 font-headers">
               Software Developer
             </p>
             <a
-              className="flex items-center justify-center px-2 py-1 my-3 text-lg font-medium rounded-full max-w-md mx-auto bg-dark-700"
+              className="flex items-center justify-center max-w-md px-2 py-1 mx-auto my-3 text-lg font-medium rounded-full bg-dark-700"
               href="https://drive.google.com/file/d/1uzQ5KZfsOw6u7q9iwO8Jnnyti4mwSaFA/view?usp=sharing"
               target="_blank"
               rel="noreferrer"
@@ -137,7 +137,7 @@ const Home: NextPage = () => {
               </a>
             </div>
             {/* Address */}
-            <div className="py-4 my-5 bg-dark-700 max-w-md mx-auto rounded-md">
+            <div className="max-w-md py-4 mx-auto my-5 rounded-md bg-dark-700">
               <div className="flex items-center justify-center space-x-2">
                 <GoLocation />
 
