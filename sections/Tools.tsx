@@ -35,7 +35,7 @@ const Technologies: NextPage = () => {
         frameworks are just tools to help in problem solving and daily
         challenges.
       </p> */}
-      <p className="max-w-lg mx-auto text-lg text-center">
+      <p className="mx-auto text-lg text-center ">
         Below are the tools i always opt for but i am not limited to.{" "}
       </p>
       <ToolsNavbar handleFiltering={handleFiltering} active={active} />
