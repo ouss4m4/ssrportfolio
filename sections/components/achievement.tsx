@@ -50,7 +50,7 @@ const Achievement: FC<IAchievement> = ({
       <div className="z-10 max-w-sm lg:max-w-lg">
         {children}
         <div>
-          <div className="flex justify-center mt-6 gap-x-5 ">
+          <div className="flex flex-wrap justify-center mt-6 gap-x-5">
             {tech.map(({ filename, label, height, width, stack }) => (
               <TechImage
                 filename={filename}
