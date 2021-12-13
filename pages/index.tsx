@@ -36,6 +36,7 @@ const Home: NextPage = () => {
             quality="100"
             width="1920"
             height="548"
+            priority
           />
           <div className="absolute z-20 top-16 left-24 lg:h-full lg:top-0 lg:left-20 ">
             <div className="flex flex-col h-full lg:justify-center gap-y-2 lg:gap-y-8">

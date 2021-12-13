@@ -1,44 +1,22 @@
 import { NextPage } from "next";
-const { motion, useAnimation } = require("framer-motion");
-import { useInView } from "react-intersection-observer";
 import { BiTimer } from "react-icons/bi";
 import { FcOvertime } from "react-icons/fc";
 import { AiOutlineTeam, AiOutlineComment } from "react-icons/ai";
 import { GiBrain } from "react-icons/gi";
 import { RiEmotionHappyLine } from "react-icons/ri";
-import { fadeInUp, stagger } from "../data/animation";
-import { useEffect } from "react";
 
 const Skills: NextPage = () => {
-  const staggerControl = useAnimation();
-  const { inView, ref } = useInView();
-  useEffect(() => {
-    if (inView) {
-      console.log("eww ?", inView);
-      staggerControl.start(stagger.animate);
-    } else {
-      staggerControl.start(stagger.initial);
-    }
-  }, [staggerControl, inView]);
   return (
     <section className="container max-w-6xl px-2 mx-auto mt-8 font-lines ">
       <h2
         id="skills"
         className="pt-8 text-4xl font-bold tracking-wider text-center m-14 font-headers"
-        ref={ref}
       >
         My Skills
       </h2>
       <div>
-        <motion.div
-          className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3"
-          animate={staggerControl}
-          initial="initial"
-        >
-          <motion.div
-            className="flex flex-col items-center text-center"
-            variants={fadeInUp}
-          >
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
+          <div className="flex flex-col items-center text-center">
             <AiOutlineComment className="w-14 h-14" />
             <h3 className="my-3 text-2xl font-bold tracking-wider font-headers">
               Communication
@@ -48,11 +26,8 @@ const Skills: NextPage = () => {
               diverse teams requires a lot of meetings and reportings. this
               sharpened my communication skills
             </p>
-          </motion.div>
-          <motion.div
-            className="flex flex-col items-center text-center"
-            variants={fadeInUp}
-          >
+          </div>
+          <div className="flex flex-col items-center text-center">
             <GiBrain className="w-14 h-14" />
             <h3 className="my-3 text-2xl font-bold tracking-wider font-headers">
               Critical Thinking
@@ -62,11 +37,8 @@ const Skills: NextPage = () => {
               clients define the needs. They trust&nbsp;me to make sensible and
               well-thought-out technical decisions.
             </p>
-          </motion.div>
-          <motion.div
-            className="flex flex-col items-center text-center"
-            variants={fadeInUp}
-          >
+          </div>
+          <div className="flex flex-col items-center text-center">
             <FcOvertime className="w-14 h-14" />
 
             <h3 className="my-3 text-2xl font-bold tracking-wider font-headers">
@@ -85,11 +57,8 @@ const Skills: NextPage = () => {
               and releases. assigning tasks and delegating projects taught me
               the importance of time.
             </p>
-          </motion.div>
-          <motion.div
-            className="flex flex-col items-center text-center"
-            variants={fadeInUp}
-          >
+          </div>
+          <div className="flex flex-col items-center text-center">
             <BiTimer className="w-14 h-14" />
 
             <h3 className="my-3 text-2xl font-bold tracking-wider font-headers">
@@ -100,11 +69,8 @@ const Skills: NextPage = () => {
               continuously changing requires that all of our applications be
               easily updated and adhere to strict deadlines..
             </p>
-          </motion.div>
-          <motion.div
-            className="flex flex-col items-center text-center"
-            variants={fadeInUp}
-          >
+          </div>
+          <div className="flex flex-col items-center text-center">
             <AiOutlineTeam className="w-14 h-14" />
             <h3 className="my-3 text-2xl font-bold tracking-wider font-headers">
               Teamwork
@@ -114,11 +80,8 @@ const Skills: NextPage = () => {
               Developers team.I have to collaborate effectively with teammates
               where communication is key.
             </p>
-          </motion.div>
-          <motion.div
-            className="flex flex-col items-center text-center"
-            variants={fadeInUp}
-          >
+          </div>
+          <div className="flex flex-col items-center text-center">
             <RiEmotionHappyLine className="w-14 h-14" />
             <h3 className="my-3 text-2xl font-bold tracking-wider font-headers">
               E.Q
@@ -128,8 +91,8 @@ const Skills: NextPage = () => {
               positive way to relive stress. and communicate effectively to
               overcome challenges is a major factor for teamwork success.
             </p>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   );
