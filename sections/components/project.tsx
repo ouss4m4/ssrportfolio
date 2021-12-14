@@ -1,8 +1,16 @@
 import Image from "next/image";
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import { AiFillProject, AiFillGithub } from "react-icons/ai";
 import { ITech } from "../../data/techsinfo";
 import TechImage from "./techimage";
+const { motion, useAnimation } = require("framer-motion");
+import { useInView } from "react-intersection-observer";
+import {
+  fadeInUp,
+  quickFadeIn,
+  slideInFromRight,
+  stagger,
+} from "../../data/animation";
 
 export interface IProject {
   name: string;
@@ -33,10 +41,31 @@ const Project: FC<Props> = ({
     name,
   },
 }) => {
+  const fadeInControl = useAnimation();
+  const slideInControl = useAnimation();
+  const delayedFadeIn = useAnimation();
+
+  const { ref, inView } = useInView();
+  useEffect(() => {
+    if (inView) {
+      fadeInControl.start(quickFadeIn.animate);
+      slideInControl.start(slideInFromRight.animate);
+      delayedFadeIn.start((i: any) => ({
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 0.4,
+          delay: i * 0.4,
+        },
+      }));
+    }
+  }, [fadeInControl, slideInControl, delayedFadeIn, inView]);
+
   return (
     <div
       className="flex flex-col max-w-lg p-4 mx-auto overflow-hidden shadow-md"
       style={{ background: "#f7f7f7" }}
+      ref={ref}
     >
       <h3 className="mb-2 text-xl font-bold tracking-wide text-center font-headers">
         {name}
@@ -51,7 +80,11 @@ const Project: FC<Props> = ({
             layout="intrinsic"
             quality="100"
           />
-          <div className="flex items-center justify-around max-w-sm m-0 mx-auto">
+          <motion.div
+            className="flex items-center justify-around max-w-sm m-0 mx-auto"
+            initial={quickFadeIn.initial}
+            animate={fadeInControl}
+          >
             {codeUrl && (
               <a
                 href={codeUrl}
@@ -72,21 +105,33 @@ const Project: FC<Props> = ({
                 <AiFillProject /> <span>Live</span>
               </a>
             )}
-          </div>
+          </motion.div>
         </div>
       </div>
-      <div className="flex flex-col ">
-        <p className="p-4 m-0 font-lines">{description}</p>
+      <div className="flex flex-col">
+        <motion.p
+          className="p-4 m-0 font-lines"
+          initial={slideInFromRight.initial}
+          animate={slideInControl}
+        >
+          {description}
+        </motion.p>
         <div className="flex flex-wrap justify-around ">
           {stack.map(({ filename, label, stack, height, width }, i) => (
-            <TechImage
-              filename={filename}
-              label={label}
-              height={height}
-              width={width}
-              stack={stack}
+            <motion.div
               key={filename}
-            />
+              custom={i}
+              initial={fadeInUp.initial}
+              animate={delayedFadeIn}
+            >
+              <TechImage
+                filename={filename}
+                label={label}
+                height={height}
+                width={width}
+                stack={stack}
+              />
+            </motion.div>
           ))}
         </div>
       </div>

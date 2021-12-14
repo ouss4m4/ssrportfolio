@@ -23,6 +23,14 @@ import Projects from "../sections/Projects";
 import Skills from "../sections/Skills";
 import Technologies from "../sections/Tools";
 import Footer from "../sections/Footer";
+const { motion, useAnimation } = require("framer-motion");
+import { useInView } from "react-intersection-observer";
+import {
+  fadeInUp,
+  quickFadeIn,
+  slideInFromRight,
+  stagger,
+} from "../data/animation";
 
 const Home: NextPage = () => {
   const resumeUrl =
@@ -60,8 +68,13 @@ const Home: NextPage = () => {
           className="hidden py-2 shadow-md md:block "
           style={{ background: "#f1f1f1" }}
         >
-          <div className="flex max-w-6xl py-6 mx-auto align-top xl:mb-10 lg:py-9 xl:pt-14 justify-evenly">
-            <div className="relative tooltip">
+          <motion.div
+            className="flex max-w-6xl py-6 mx-auto align-top xl:mb-10 lg:py-9 xl:pt-14 justify-evenly"
+            variants={stagger}
+            initial="initial"
+            animate="animate"
+          >
+            <motion.div className="relative tooltip" variants={quickFadeIn}>
               <a
                 href="https://www.linkedin.com/in/bzouss/"
                 target="_blank"
@@ -70,8 +83,8 @@ const Home: NextPage = () => {
                 <BsLinkedin className="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 " />
               </a>
               <span className="tooltiptext">LinkedIn</span>
-            </div>
-            <div className="relative tooltip">
+            </motion.div>
+            <motion.div className="relative tooltip" variants={quickFadeIn}>
               <a
                 href="https://github.com/ouss4m4"
                 target="_blank"
@@ -80,15 +93,15 @@ const Home: NextPage = () => {
                 <BsGithub className="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 " />
               </a>
               <span className="tooltiptext">Github</span>
-            </div>
-            <div className="relative tooltip">
+            </motion.div>
+            <motion.div className="relative tooltip" variants={quickFadeIn}>
               <a href={resumeUrl} target="_blank" rel="noreferrer">
                 <GrDocumentPdf className="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 " />
               </a>
               <span className="tooltiptext">My Resume</span>
-            </div>
+            </motion.div>
 
-            <div className="relative tooltip">
+            <motion.div className="relative tooltip" variants={quickFadeIn}>
               <a
                 href="https://twitter.com/0uss4m4"
                 target="_blank"
@@ -97,8 +110,8 @@ const Home: NextPage = () => {
                 <BsTwitter className="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 " />
               </a>
               <span className="tooltiptext">Twitter</span>
-            </div>
-            <div className="relative tooltip">
+            </motion.div>
+            <motion.div className="relative tooltip" variants={quickFadeIn}>
               <a
                 href="mailto:bz.oussama@gmail.com"
                 target="_blank"
@@ -107,8 +120,8 @@ const Home: NextPage = () => {
                 <SiGmail className="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 " />
               </a>
               <span className="tooltiptext">Email Me</span>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
           <div className="items-center justify-center hidden xl:flex mb-11">
             <a href="#experience" className="block">
               <BsArrowDownCircle className="w-14 h-14" />

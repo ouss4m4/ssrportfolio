@@ -1,8 +1,11 @@
 import Image from "next/image";
 import { Properties } from "csstype";
-import { Children, FC } from "react";
+import { Children, FC, useEffect } from "react";
 import TechImage from "./techimage";
 import { ITech } from "../../data/techsinfo";
+const { motion, useAnimation } = require("framer-motion");
+import { useInView } from "react-intersection-observer";
+import { fadeInUp, slideInFromRight } from "../../data/animation";
 
 const polygon = (left: boolean, bg?: string): Properties => ({
   width: "23%",
@@ -27,14 +30,31 @@ const Achievement: FC<IAchievement> = ({
   children,
 }) => {
   const isLeft = direction === "left";
+  const fadeInControl = useAnimation();
+  const rightSlideControl = useAnimation();
+
+  const { ref, inView } = useInView();
+  useEffect(() => {
+    console.log("effect active");
+    if (inView) {
+      fadeInControl.start(fadeInUp.animate);
+      rightSlideControl.start(slideInFromRight.animate);
+    }
+  }, [fadeInControl, rightSlideControl, inView]);
+
   return (
     <div
       className={`flex flex-col items-center justify-around p-2 mt-14 md:relative lg:mt-12   ${
         isLeft ? "md:flex-row" : "md:flex-row-reverse"
       } `}
       style={{ minHeight: "550px" }}
+      ref={ref}
     >
-      <div className="relative z-10 ">
+      <motion.div
+        className="relative z-10 "
+        animate={fadeInControl}
+        initial={fadeInUp.initial}
+      >
         <Image
           src={`/images/${imgSrc}`}
           alt={imgLabel}
@@ -43,11 +63,15 @@ const Achievement: FC<IAchievement> = ({
           quality="100"
           layout="intrinsic"
         />
-      </div>
+      </motion.div>
       <div className="absolute hidden w-full h-full md:block">
         <div style={polygon(isLeft)}></div>
       </div>
-      <div className="z-10 max-w-sm lg:max-w-lg">
+      <motion.div
+        className="z-10 max-w-sm lg:max-w-lg"
+        initial={slideInFromRight.initial}
+        animate={rightSlideControl}
+      >
         {children}
         <div>
           <div className="flex flex-wrap justify-center mt-6 gap-x-5">
@@ -63,7 +87,7 @@ const Achievement: FC<IAchievement> = ({
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
