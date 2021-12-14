@@ -5,7 +5,7 @@ import TechsInfo from "../data/techsinfo";
 const Experience: NextPage = () => {
   return (
     <section
-      className="mx-auto bg-white font-lines"
+      className="mx-auto overflow-hidden bg-white font-lines"
       style={{ background: "#fefefe" }}
     >
       <div className="px-8 text-center">
