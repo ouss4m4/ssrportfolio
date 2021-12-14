@@ -4,6 +4,8 @@ import TechsInfo, { IStack } from "../data/techsinfo";
 import Image from "next/image";
 import ToolsNavbar from "./components/toolsnav";
 import TechImage from "./components/techimage";
+import { quickFadeIn } from "../data/animation";
+const { motion } = require("framer-motion");
 
 const Technologies: NextPage = () => {
   const techList = Object.values(TechsInfo);
@@ -39,11 +41,14 @@ const Technologies: NextPage = () => {
         Below are the tools i always opt for but i am not limited to.{" "}
       </p>
       <ToolsNavbar handleFiltering={handleFiltering} active={active} />
-      <div className="grid grid-cols-3 gap-8 h-96">
+      <motion.div className="grid grid-cols-3 gap-8 h-96">
         {tools.map(({ filename, label, height, width, stack }) => (
-          <div
+          <motion.div
             key={filename}
             className="flex flex-col items-center justify-center"
+            variants={quickFadeIn}
+            initial="initial"
+            animate="animate"
           >
             <TechImage
               filename={filename}
@@ -52,9 +57,9 @@ const Technologies: NextPage = () => {
               width={width ? width : 95}
               stack={stack}
             />
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };
