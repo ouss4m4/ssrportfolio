@@ -29,6 +29,7 @@ import { fadeInUp, stagger } from "../data/animation";
 const Home: NextPage = () => {
   const resumeUrl =
     "https://drive.google.com/file/d/1VMg2f8nGgkrNJIL24TRnvim1lFY_FgCp/view?usp=sharing";
+  const phonenum = "+213666095895";
   return (
     <>
       <section className="pb-2" id="top">
@@ -63,7 +64,7 @@ const Home: NextPage = () => {
           style={{ background: "#f1f1f1" }}
         >
           <motion.div
-            className="flex max-w-6xl py-6 mx-auto align-top xl:mb-10 lg:py-9 xl:pt-14 justify-evenly"
+            className="flex max-w-6xl py-6 mx-auto align-top justify-evenly"
             variants={stagger}
             initial="initial"
             animate="animate"
@@ -116,9 +117,26 @@ const Home: NextPage = () => {
               <span className="tooltiptext">Email Me</span>
             </motion.div>
           </motion.div>
-          <div className="items-center justify-center hidden xl:flex mb-11">
-            <a href="#experience" className="block">
-              <BsArrowDownCircle className="w-14 h-14" />
+          <div className="flex max-w-xs mx-auto my-6 lg:max-w-lg lg:my-12 justify-evenly align-center gap-x-6">
+            <a
+              href={`https://wa.me/${phonenum}`}
+              target="_blank"
+              rel="noreferrer"
+              role="button"
+              className="relative block tooltip"
+            >
+              <AiOutlineWhatsApp className="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 " />
+              <span className="tooltiptext">WhatsApp</span>
+            </a>
+            <a
+              href="tg://resolve?domain=ouss4m4"
+              target="_blank"
+              rel="noreferrer"
+              role="button"
+              className="relative block tooltip"
+            >
+              <BsTelegram className="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 " />
+              <span className="tooltiptext">Telegram</span>
             </a>
           </div>
         </div>
@@ -151,7 +169,7 @@ const Home: NextPage = () => {
               Resume
             </a>
             {/* Social Buttons */}
-            <div className="flex justify-around w-9/12 mx-auto my-5 md:w-full">
+            <div className="flex justify-around w-9/12 mx-auto my-5 ">
               <a
                 href="https://github.com/ouss4m4"
                 target="_blank"
@@ -182,9 +200,34 @@ const Home: NextPage = () => {
                 <span>El-Eulma, Algeria</span>
               </div>
               <div className="flex items-center justify-center my-4 space-x-2">
-                <AiOutlineWhatsApp size="24" />
-                <BsTelegram size="24" />
-                <span className="text-white font-lines">+213 666 095 895</span>
+                <a
+                  href={`https://wa.me/${phonenum}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  role="button"
+                  className="relative block tooltip"
+                >
+                  <AiOutlineWhatsApp size="24" />
+                  <span className="tooltiptext">WhatsApp</span>
+                </a>
+                <a
+                  href="tg://resolve?domain=ouss4m4"
+                  target="_blank"
+                  rel="noreferrer"
+                  role="button"
+                  className="relative block tooltip"
+                >
+                  <BsTelegram size="24" />
+                  <span className="tooltiptext">Telegram</span>
+                </a>
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href={`tel:${phonenum}`}
+                  className="text-white font-lines"
+                >
+                  {phonenum}
+                </a>
               </div>
               <p className="my-2 text-lg text-center">bz.oussama@gmail.com</p>
             </div>
