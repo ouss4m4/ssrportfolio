@@ -5,7 +5,7 @@ export const projectsData: IProject[] = [
   {
     name: "SnapShot",
     description:
-      "Full Stack projects allows users to browse images. requires login to post and comment on other people photos. hosted on Heroku Free Tier slows the initial load",
+      "MERN Stack app built from scratch, It allows users to browse images. also requires login to post and comment on other people photos. hosted on Heroku Free Tier that slows the initial load",
     liveUrl: "https://mern-app.herokuapp.com/",
     codeUrl: "https://github.com/ouss4m4/snapShot",
     imageLabel: "Snapshot",
@@ -22,7 +22,7 @@ export const projectsData: IProject[] = [
     liveUrl: null,
     codeUrl: "https://github.com/ouss4m4/NgNetStore",
     description:
-      "eCommerce application built from scrach using .Net core 6 for the backend, Redis as db for shopping cart, SQLServer for MS.Identity and Databse, Stripe as a payment Method, Angular for the frontend ",
+      "eCommerce application built from scratch using .Net core 6 for the backend, Redis as db for shopping cart, SQLServer for MS.Identity and Database, Stripe as a payment Method, Angular for the frontend ",
     imageName: "ngnetstore.png",
     imageLabel: "Angular .Net Store",
     stack: [
@@ -38,7 +38,7 @@ export const projectsData: IProject[] = [
     liveUrl: "https://salesorder-app.azurewebsites.net/",
     codeUrl: "https://github.com/ouss4m4/sales-order",
     description:
-      "Enterprise like application to create sales orders, And manage clients and procuts. API developed by .Net Core 6, with Role based authorization, Microsoft SQLServer for the database, ORM Entity Framework,",
+      "Enterprise like application to create sales orders, And manage clients and products. API developed with .Net Core 6, Role based authorization, Microsoft SQLServer for the database, and Entity Framework as ORM.",
     imageName: "salesorder.png",
     imageLabel: "Sales Order",
     stack: [
@@ -51,7 +51,7 @@ export const projectsData: IProject[] = [
   {
     name: "Tournament Tracker",
     description:
-      "Desktop app built with WinForms on .NetCore to create players add them to teams, create tournaments using these teams and rewards, depending on number of starting teams,assign BYEs and rounds ",
+      "Desktop app built with WinForms on .NetCore to create players add them to teams, create tournaments using these teams and rewards, depending on number of starting teams, assign BYEs and rounds ",
     imageName: "tournament-tracker.png",
     imageLabel: "Tournament Tracker",
     codeUrl: "https://github.com/ouss4m4/TournamentTracker",
@@ -73,7 +73,7 @@ export const projectsData: IProject[] = [
   {
     name: "K8S MicroServices API",
     description:
-      "API Microservice architecture built with .Net Core 5 using RabbitMq as eventbus and Docker with Kubernetes for deployment",
+      "API Microservice architecture built with .Net Core 5 using RabbitMq as event bus and Docker with Kubernetes for deployment",
     codeUrl: "https://github.com/ouss4m4/k8s-net-rabbitmq",
     liveUrl: null,
     imageName: "k8s-ms-arch.png",
@@ -88,7 +88,7 @@ export const projectsData: IProject[] = [
   {
     name: "Clean Code Architecture ",
     description:
-      "Domain-Driven Design with Clean Code Architecture Concepts API to create Clients Items and Orders. Architecture understanding is the GOAL of the api not the data",
+      "API built with Domain Driven Design and Clean Code Architecture, It allows CRUD operations on Clients, Items, and Orders Models. the goal of the project is to implement DDD and understand Clean Code Architecture",
     liveUrl: "https://ddd-sales.azurewebsites.net/api/v1",
     codeUrl: "https://github.com/ouss4m4/ddd-sales",
     imageName: "clean-architecture.jpg",
@@ -103,7 +103,7 @@ export const projectsData: IProject[] = [
   {
     name: "Task Manager",
     description:
-      "Drag n Drop Task manager with persistance done in react deployed with Amazon Amplify",
+      "Task manager web application with a Drag n Drop style, Using local storage for persistance, built with create-react-app and deployed to AWS through Amazon Amplify",
     liveUrl: "https://master.d3e64dmv8w4bbk.amplifyapp.com/",
     codeUrl: "https://github.com/ouss4m4/Task-tracker",
     imageName: "taskmanager.png",

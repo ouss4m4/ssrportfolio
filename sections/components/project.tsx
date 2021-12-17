@@ -90,7 +90,7 @@ const Project: FC<Props> = ({
                 href={codeUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center px-4 py-2 space-x-3 border-2 rounded-xl hover:bg-dark-700 hover:text-whitetxt"
+                className="flex items-center px-4 py-2 space-x-3 border-2 shadow-md rounded-xl hover:bg-dark-700 hover:text-whitetxt"
               >
                 <AiFillGithub /> <span>Code</span>
               </a>
@@ -100,7 +100,7 @@ const Project: FC<Props> = ({
                 href={liveUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center px-4 py-2 space-x-3 border-2 rounded-xl hover:bg-dark-500 hover:text-whitetxt"
+                className="flex items-center px-4 py-2 space-x-3 border-2 shadow-md rounded-xl hover:bg-dark-500 hover:text-whitetxt"
               >
                 <AiFillProject /> <span>Live</span>
               </a>

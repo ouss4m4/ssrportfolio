@@ -23,14 +23,8 @@ import Projects from "../sections/Projects";
 import Skills from "../sections/Skills";
 import Technologies from "../sections/Tools";
 import Footer from "../sections/Footer";
-const { motion, useAnimation } = require("framer-motion");
-import { useInView } from "react-intersection-observer";
-import {
-  fadeInUp,
-  quickFadeIn,
-  slideInFromRight,
-  stagger,
-} from "../data/animation";
+const { motion } = require("framer-motion");
+import { fadeInUp, stagger } from "../data/animation";
 
 const Home: NextPage = () => {
   const resumeUrl =
@@ -74,7 +68,7 @@ const Home: NextPage = () => {
             initial="initial"
             animate="animate"
           >
-            <motion.div className="relative tooltip" variants={quickFadeIn}>
+            <motion.div className="relative tooltip" variants={fadeInUp}>
               <a
                 href="https://www.linkedin.com/in/bzouss/"
                 target="_blank"
@@ -84,7 +78,7 @@ const Home: NextPage = () => {
               </a>
               <span className="tooltiptext">LinkedIn</span>
             </motion.div>
-            <motion.div className="relative tooltip" variants={quickFadeIn}>
+            <motion.div className="relative tooltip" variants={fadeInUp}>
               <a
                 href="https://github.com/ouss4m4"
                 target="_blank"
@@ -94,14 +88,14 @@ const Home: NextPage = () => {
               </a>
               <span className="tooltiptext">Github</span>
             </motion.div>
-            <motion.div className="relative tooltip" variants={quickFadeIn}>
+            <motion.div className="relative tooltip" variants={fadeInUp}>
               <a href={resumeUrl} target="_blank" rel="noreferrer">
                 <GrDocumentPdf className="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 " />
               </a>
               <span className="tooltiptext">My Resume</span>
             </motion.div>
 
-            <motion.div className="relative tooltip" variants={quickFadeIn}>
+            <motion.div className="relative tooltip" variants={fadeInUp}>
               <a
                 href="https://twitter.com/0uss4m4"
                 target="_blank"
@@ -111,7 +105,7 @@ const Home: NextPage = () => {
               </a>
               <span className="tooltiptext">Twitter</span>
             </motion.div>
-            <motion.div className="relative tooltip" variants={quickFadeIn}>
+            <motion.div className="relative tooltip" variants={fadeInUp}>
               <a
                 href="mailto:bz.oussama@gmail.com"
                 target="_blank"

@@ -38,7 +38,7 @@ const Technologies: NextPage = () => {
         challenges.
       </p> */}
       <p className="mx-auto text-lg text-center ">
-        Below are the tools i always opt for but i am not limited to.{" "}
+        Below are the tools I opt for, but not limited to.{" "}
       </p>
       <ToolsNavbar handleFiltering={handleFiltering} active={active} />
       <motion.div className="grid grid-cols-3 gap-8 h-96">

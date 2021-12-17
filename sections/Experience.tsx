@@ -30,10 +30,12 @@ const Experience: NextPage = () => {
               • 2018 - Today
             </span>
           </a>
-          <span className="tracking-wider">@PharmaInvest SPA</span>
+          <a href="" className="tracking-wider">
+            @PharmaInvest SPA
+          </a>
         </div>
         <p className="max-w-lg pb-4 mx-auto text-xl text-center">
-          As the developers team leader, i am responsible on creating,
+          As the developers team leader, I am responsible on creating,
           maintaining, and promoting the use of digital solutions to help the
           company on its mission towards Digital transformation.
         </p>
@@ -88,13 +90,13 @@ const Experience: NextPage = () => {
         <ul className="px-6 text-lg tracking-wide list-disc list-inside font-lines">
           <li className="mt-4">
             Instead of using the ERP Client App, Sales orders are now created
-            using a modern web app -PWA- with a customized UX/UI designed to
+            using a progressive web app with a customized UX/UI designed to
             expedite the ordering process.
           </li>
           <li className="mt-4">
             Users are not constrained by warehouses location anymore, I
             automated the order separation before the checkout process. and each
-            warehouse receive the corresponding order
+            warehouse prints the corresponding order.
           </li>
         </ul>
       </Achievement>
@@ -116,9 +118,14 @@ const Experience: NextPage = () => {
         <ul className="px-6 text-lg tracking-wide list-disc list-inside font-lines">
           <li className="mt-4">
             We automated the invoicing and printing process by creating a
-            desktop software that connected to an API implemented on top of SAP
-            B1 Service Layer.
-          </li>{" "}
+            desktop application that connects to a private API implemented on
+            top of SAP Business One Service Layer.
+          </li>
+          <li className="mt-4">
+            The new printing process sort the list of pending orders
+            automatically while respecting shipping dates and sectors priorities
+            set by the company.
+          </li>
         </ul>
       </Achievement>
     </section>

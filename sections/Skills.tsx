@@ -6,12 +6,7 @@ import { GiBrain } from "react-icons/gi";
 import { RiEmotionHappyLine } from "react-icons/ri";
 const { motion, useAnimation } = require("framer-motion");
 import { useInView } from "react-intersection-observer";
-import {
-  fadeInUp,
-  quickFadeIn,
-  slideInFromRight,
-  stagger,
-} from "../data/animation";
+import { fadeInUp } from "../data/animation";
 import { useEffect } from "react";
 
 const Skills: NextPage = () => {
@@ -84,17 +79,17 @@ const Skills: NextPage = () => {
               Time Management
             </h3>
             <p className="max-w-md mx-auto">
-              My team use{" "}
+              I use{" "}
               <a
                 href="https://www.atlassian.com/software/jira"
                 rel="noreferrer"
                 target="_blank"
               >
-                JIRA®
+                JIRA ®
               </a>{" "}
-              to Plan, track, and manage Software development. Creating sprints
-              and releases. assigning tasks and delegating projects taught me
-              the importance of time.
+              to Plan, track, and manage projects. Creating sprints and
+              releases. assigning tasks and delegating projects taught me the
+              importance of time.
             </p>
           </motion.div>
           <motion.div
@@ -111,7 +106,7 @@ const Skills: NextPage = () => {
             <p className="max-w-md mx-auto">
               Working in the pharmaceutical industry where laws and demands are
               continuously changing requires that all of our applications be
-              easily updated and adhere to strict deadlines..
+              easily updated and adhere to strict deadlines.
             </p>
           </motion.div>
           <motion.div
@@ -125,9 +120,9 @@ const Skills: NextPage = () => {
               Teamwork
             </h3>
             <p className="max-w-md mx-auto">
-              Teamwork is vital. As the lead developer and a member on the
-              Developers team.I have to collaborate effectively with teammates
-              where communication is key.
+              Teamwork is vital. As the lead and a member of the Developers
+              team. I have to collaborate effectively with subordinates and
+              assign work where communication is key.
             </p>
           </motion.div>
           <motion.div
