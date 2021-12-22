@@ -28,8 +28,8 @@ import { fadeInUp, stagger } from "../data/animation";
 
 const Home: NextPage = () => {
   const resumeUrl =
-    "https://drive.google.com/file/d/1VMg2f8nGgkrNJIL24TRnvim1lFY_FgCp/view?usp=sharing";
-  const phonenum = "+213666095895";
+    'https://drive.google.com/file/d/1Dj8xak_vuWygHqIjUOMzfXYsVUf3wiG5/view?usp=sharing';
+  const phonenum = '+213666095895';
   return (
     <>
       <section className="pb-2" id="top">
