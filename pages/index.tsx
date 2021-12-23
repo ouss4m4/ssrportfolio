@@ -1,34 +1,34 @@
-import type { NextPage } from "next";
-import Image from "next/image";
-import React from "react";
+import type { NextPage } from 'next';
+import Image from 'next/image';
+import React from 'react';
 import {
   BsArrowDownCircle,
   BsLinkedin,
   BsGithub,
   BsTwitter,
   BsTelegram,
-} from "react-icons/bs";
-import { SiGmail } from "react-icons/si";
-import { GiTie } from "react-icons/gi";
+} from 'react-icons/bs';
+import { SiGmail } from 'react-icons/si';
+import { GiTie } from 'react-icons/gi';
 import {
   AiFillGithub,
   AiFillLinkedin,
   AiFillTwitterCircle,
   AiOutlineWhatsApp,
-} from "react-icons/ai";
-import { GoLocation } from "react-icons/go";
-import { GrDocumentPdf } from "react-icons/gr";
-import Experience from "../sections/Experience";
-import Projects from "../sections/Projects";
-import Skills from "../sections/Skills";
-import Technologies from "../sections/Tools";
-import Footer from "../sections/Footer";
-const { motion } = require("framer-motion");
-import { fadeInUp, stagger } from "../data/animation";
+} from 'react-icons/ai';
+import { GoLocation } from 'react-icons/go';
+import { GrDocumentPdf } from 'react-icons/gr';
+import Experience from '../sections/Experience';
+import Projects from '../sections/Projects';
+import Skills from '../sections/Skills';
+import Technologies from '../sections/Tools';
+import Footer from '../sections/Footer';
+const { motion } = require('framer-motion');
+import { fadeInUp, stagger } from '../data/animation';
 
 const Home: NextPage = () => {
   const resumeUrl =
-    'https://drive.google.com/file/d/1Dj8xak_vuWygHqIjUOMzfXYsVUf3wiG5/view?usp=sharing';
+    'https://drive.google.com/file/d/18r1h8pNQSdol-Ayb_Hj6mStYNqPAnBx0/view?usp=sharing';
   const phonenum = '+213666095895';
   return (
     <>
@@ -61,7 +61,7 @@ const Home: NextPage = () => {
         {/* lg:socials */}
         <div
           className="hidden py-2 shadow-md md:block "
-          style={{ background: "#f1f1f1" }}
+          style={{ background: '#f1f1f1' }}
         >
           <motion.div
             className="flex max-w-6xl py-6 mx-auto align-top justify-evenly"
@@ -235,7 +235,7 @@ const Home: NextPage = () => {
             <div className="flex justify-center pb-14">
               <button
                 className="w-8/12 px-5 py-2 my-2 text-center rounded-full text-whitetxt bg-dark-700"
-                onClick={() => window.open("mailto:bz.oussama@gmail.com")}
+                onClick={() => window.open('mailto:bz.oussama@gmail.com')}
               >
                 Email Me
               </button>
