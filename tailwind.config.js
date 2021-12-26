@@ -7,7 +7,14 @@ module.exports = {
       lines: ['Merriweather', 'Georgia', 'serif'],
       headers: ['Montserrat', 'sans-serif'],
     },
+
     extend: {
+      screens: {
+        '3xl': '1800px',
+      },
+      maxWidth: {
+        '8xl': '100rem',
+      },
       colors: {
         accent: {
           DEFAULT: '#00FFFF',

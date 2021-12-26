@@ -16,7 +16,7 @@ const Experience: NextPage = () => {
           Professional Experience
         </h2>
 
-        <h3 className="mt-2 text-2xl font-bold tracking-wider font-headers">
+        <h3 className="mt-2 text-3xl font-bold tracking-wider font-headers ">
           Lead Software Developer
         </h3>
         <div className="flex flex-col items-center justify-center max-w-lg mx-auto mb-6 md:flex-row">
@@ -24,7 +24,7 @@ const Experience: NextPage = () => {
             href="https://www.linkedin.com/company/pharmainvestspa"
             target="_blank"
             rel="noreferrer"
-            className="block font-bold tracking-widest cursor-pointer font-lines"
+            className="block font-bold tracking-widest cursor-pointer font-lines 3xl:text-lg"
           >
             <span className="pr-8 italic font-bold tracking-wide text-md">
               • 2018 - Today
@@ -34,12 +34,12 @@ const Experience: NextPage = () => {
             href="https://www.linkedin.com/company/pharmainvestspa"
             target="_blank"
             rel="noreferrer"
-            className="tracking-wider"
+            className="tracking-wider 3xl:text-lg"
           >
             @PharmaInvest SPA
           </a>
         </div>
-        <p className="max-w-lg pb-4 mx-auto text-xl text-center">
+        <p className="max-w-lg pb-4 mx-auto text-xl text-center  3xl:max-w-2xl">
           As the developers team leader, I am responsible on creating,
           maintaining, and promoting the use of digital solutions to help the
           company on its mission towards Digital transformation.
@@ -59,10 +59,10 @@ const Experience: NextPage = () => {
           TechsInfo.sap,
         ]}
       >
-        <h3 className="text-xl font-bold tracking-wide text-center font-headers">
+        <h3 className="text-xl font-bold tracking-wide text-center font-headers ">
           Public Apps
         </h3>
-        <ul className="text-lg tracking-wide list-disc list-inside font-lines">
+        <ul className="text-lg tracking-wide list-disc list-inside font-lines ">
           <li className="mt-4">
             I Developed and published a
             <strong> cross-platform mobile app</strong> that allows customers to
@@ -89,10 +89,10 @@ const Experience: NextPage = () => {
           TechsInfo.node,
         ]}
       >
-        <h3 className="mb-5 text-xl font-bold tracking-wide text-center font-headers">
+        <h3 className="mb-5 text-xl font-bold tracking-wide text-center font-headers ">
           Sales Order Application
         </h3>
-        <ul className="px-6 text-lg tracking-wide list-disc list-inside font-lines">
+        <ul className="px-6 text-lg tracking-wide list-disc list-inside font-lines ">
           <li className="mt-4">
             Instead of using the ERP Client App, Sales orders are now created
             using a progressive web app with a customized UX/UI designed to
@@ -117,10 +117,10 @@ const Experience: NextPage = () => {
           TechsInfo.rxjs,
         ]}
       >
-        <h3 className="text-xl font-bold tracking-wide text-center font-headers">
+        <h3 className="text-xl font-bold tracking-wide text-center font-headers ">
           Shipping and Distribution
         </h3>
-        <ul className="px-6 text-lg tracking-wide list-disc list-inside font-lines">
+        <ul className="px-6 text-lg tracking-wide list-disc list-inside font-lines ">
           <li className="mt-4">
             We automated the invoicing and printing process by creating a
             desktop application that connects to a private API implemented on

@@ -1,18 +1,18 @@
-import Image from "next/image";
-import { Properties } from "csstype";
-import { Children, FC, useEffect } from "react";
-import TechImage from "./techimage";
-import { ITech } from "../../data/techsinfo";
-const { motion, useAnimation } = require("framer-motion");
-import { useInView } from "react-intersection-observer";
-import { fadeInUp, slideInFromRight } from "../../data/animation";
+import Image from 'next/image';
+import { Properties } from 'csstype';
+import { Children, FC, useEffect } from 'react';
+import TechImage from './techimage';
+import { ITech } from '../../data/techsinfo';
+const { motion, useAnimation } = require('framer-motion');
+import { useInView } from 'react-intersection-observer';
+import { fadeInUp, slideInFromRight } from '../../data/animation';
 
 const polygon = (left: boolean, bg?: string): Properties => ({
-  width: "23%",
-  height: "63%",
-  background: bg ? bg : "rgb(99 110 143)",
-  borderRadius: left ? "0 33% 33% 0" : "33% 0 0 33%",
-  float: left ? "left" : "right",
+  width: '23%',
+  height: '63%',
+  background: bg ? bg : 'rgb(99 110 143)',
+  borderRadius: left ? '0 33% 33% 0' : '33% 0 0 33%',
+  float: left ? 'left' : 'right',
 });
 
 interface IAchievement {
@@ -29,13 +29,12 @@ const Achievement: FC<IAchievement> = ({
   tech,
   children,
 }) => {
-  const isLeft = direction === "left";
+  const isLeft = direction === 'left';
   const fadeInControl = useAnimation();
   const rightSlideControl = useAnimation();
 
   const { ref, inView } = useInView();
   useEffect(() => {
-    console.log("effect active");
     if (inView) {
       fadeInControl.start(fadeInUp.animate);
       rightSlideControl.start(slideInFromRight.animate);
@@ -44,10 +43,11 @@ const Achievement: FC<IAchievement> = ({
 
   return (
     <div
-      className={`flex flex-col items-center justify-around p-2 mt-14 md:relative lg:mt-12   ${
-        isLeft ? "md:flex-row" : "md:flex-row-reverse"
+      className={`flex flex-col items-center justify-around p-2 mt-14 md:relative 
+      lg:mt-12 3xl:max-w-8xl 3xl:mx-auto  ${
+        isLeft ? 'md:flex-row' : 'md:flex-row-reverse'
       } `}
-      style={{ minHeight: "550px" }}
+      style={{ minHeight: '550px' }}
       ref={ref}
     >
       <motion.div

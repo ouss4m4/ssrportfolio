@@ -30,6 +30,9 @@ const Home: NextPage = () => {
   const resumeUrl =
     'https://drive.google.com/file/d/1HI1Eb2yF3QnbQMjIVCUK8A43eEkNFdn_/view?usp=sharing';
   const phonenum = '+213666095895';
+  const socialClassname = () => {
+    return 'w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 xl:w-26  xl:h-26 3xl:w-32 3xl:h-32';
+  };
   return (
     <>
       <section className="pb-2" id="top">
@@ -44,14 +47,13 @@ const Home: NextPage = () => {
             height="548"
             priority
           />
-          <div className="absolute z-20 top-16 left-24 lg:h-full lg:top-0 lg:left-20 ">
-            <div className="flex flex-col h-full lg:justify-center gap-y-2 lg:gap-y-8">
-              <h1 className="text-white md:text-3xl lg:text-5xl font-lines">
+          <div className="absolute z-20 top-16 left-24 lg:h-full lg:top-0 lg:left-20 3xl:left-80">
+            <div className="flex flex-col h-full lg:justify-center gap-y-2 lg:gap-y-8 3xl:gap-y-18">
+              <h1 className="text-white md:text-3xl lg:text-5xl 3xl:text-8xl font-lines">
                 Oussama Baaziz
-                {/* <span className="font-kaushan text-accent">Oussama</span> */}
               </h1>
               <div className="typewriter">
-                <h3 className="text-xl text-white font-lines lg:text-3xl">
+                <h3 className="text-xl text-white font-lines lg:text-3xl 3xl:text-6xl">
                   Software Developer
                 </h3>
               </div>
@@ -63,56 +65,72 @@ const Home: NextPage = () => {
           className="hidden py-2 shadow-md md:block "
           style={{ background: '#f1f1f1' }}
         >
+          {/* social icons 1st row */}
           <motion.div
-            className="flex max-w-6xl py-6 mx-auto align-top justify-evenly"
+            className="flex max-w-6xl py-6 mx-auto align-top justify-evenly 3xl:max-w-7xl "
             variants={stagger}
             initial="initial"
             animate="animate"
           >
-            <motion.div className="relative tooltip" variants={fadeInUp}>
+            <motion.div
+              className="relative tooltip  3xl:mx-12 3xl:mx-12"
+              variants={fadeInUp}
+            >
               <a
                 href="https://www.linkedin.com/in/bzouss/"
                 target="_blank"
                 rel="noreferrer"
               >
-                <BsLinkedin className="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 " />
+                <BsLinkedin className={socialClassname()} />
               </a>
               <span className="tooltiptext">LinkedIn</span>
             </motion.div>
-            <motion.div className="relative tooltip" variants={fadeInUp}>
+            <motion.div
+              className="relative tooltip  3xl:mx-12"
+              variants={fadeInUp}
+            >
               <a
                 href="https://github.com/ouss4m4"
                 target="_blank"
                 rel="noreferrer"
               >
-                <BsGithub className="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 " />
+                <BsGithub className={socialClassname()} />
               </a>
               <span className="tooltiptext">Github</span>
             </motion.div>
-            <motion.div className="relative tooltip" variants={fadeInUp}>
+            <motion.div
+              className="relative tooltip  3xl:mx-12"
+              variants={fadeInUp}
+            >
               <a href={resumeUrl} target="_blank" rel="noreferrer">
-                <GrDocumentPdf className="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 " />
+                <GrDocumentPdf className={socialClassname()} />
               </a>
               <span className="tooltiptext">My Resume</span>
             </motion.div>
 
-            <motion.div className="relative tooltip" variants={fadeInUp}>
+            <motion.div
+              className="relative tooltip  3xl:mx-12"
+              variants={fadeInUp}
+            >
               <a
                 href="https://twitter.com/0uss4m4"
                 target="_blank"
                 rel="noreferrer"
               >
-                <BsTwitter className="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 " />
+                <BsTwitter className={socialClassname()} />
               </a>
               <span className="tooltiptext">Twitter</span>
             </motion.div>
-            <motion.div className="relative tooltip" variants={fadeInUp}>
+            <motion.div
+              className="relative tooltip  3xl:mx-12"
+              variants={fadeInUp}
+            >
               <a
                 href="mailto:bz.oussama@gmail.com"
                 target="_blank"
                 rel="noreferrer"
               >
-                <SiGmail className="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 " />
+                <SiGmail className={socialClassname()} />
               </a>
               <span className="tooltiptext">Email Me</span>
             </motion.div>
@@ -125,7 +143,7 @@ const Home: NextPage = () => {
               role="button"
               className="relative block tooltip"
             >
-              <AiOutlineWhatsApp className="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 " />
+              <AiOutlineWhatsApp className={socialClassname()} />
               <span className="tooltiptext">WhatsApp</span>
             </a>
             <a
@@ -135,7 +153,7 @@ const Home: NextPage = () => {
               role="button"
               className="relative block tooltip"
             >
-              <BsTelegram className="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 " />
+              <BsTelegram className={socialClassname()} />
               <span className="tooltiptext">Telegram</span>
             </a>
           </div>
