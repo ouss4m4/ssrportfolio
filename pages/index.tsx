@@ -28,7 +28,7 @@ import { fadeInUp, stagger } from '../data/animation';
 
 const Home: NextPage = () => {
   const resumeUrl =
-    'https://drive.google.com/file/d/18r1h8pNQSdol-Ayb_Hj6mStYNqPAnBx0/view?usp=sharing';
+    'https://drive.google.com/file/d/1HI1Eb2yF3QnbQMjIVCUK8A43eEkNFdn_/view?usp=sharing';
   const phonenum = '+213666095895';
   return (
     <>

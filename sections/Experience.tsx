@@ -1,12 +1,12 @@
-import { NextPage } from "next";
-import Achievement from "./components/achievement";
-import TechsInfo from "../data/techsinfo";
+import { NextPage } from 'next';
+import Achievement from './components/achievement';
+import TechsInfo from '../data/techsinfo';
 
 const Experience: NextPage = () => {
   return (
     <section
       className="mx-auto overflow-hidden bg-white font-lines"
-      style={{ background: "#fefefe" }}
+      style={{ background: '#fefefe' }}
     >
       <div className="px-8 text-center">
         <h2
@@ -30,7 +30,12 @@ const Experience: NextPage = () => {
               • 2018 - Today
             </span>
           </a>
-          <a href="" className="tracking-wider">
+          <a
+            href="https://www.linkedin.com/company/pharmainvestspa"
+            target="_blank"
+            rel="noreferrer"
+            className="tracking-wider"
+          >
             @PharmaInvest SPA
           </a>
         </div>
