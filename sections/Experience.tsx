@@ -17,7 +17,7 @@ const Experience: NextPage = () => {
         </h2>
 
         <h3 className="mt-2 text-3xl font-bold tracking-wider font-headers ">
-          Lead Software Developer
+          Software Developer
         </h3>
         <div className="flex flex-col items-center justify-center max-w-lg mx-auto mb-6 md:flex-row">
           <a
@@ -39,7 +39,7 @@ const Experience: NextPage = () => {
             @PharmaInvest SPA
           </a>
         </div>
-        <p className="max-w-lg pb-4 mx-auto text-xl text-center  3xl:max-w-2xl">
+        <p className="max-w-lg pb-4 mx-auto text-xl text-center 3xl:max-w-2xl">
           As the developers team leader, I am responsible on creating,
           maintaining, and promoting the use of digital solutions to help the
           company on its mission towards Digital transformation.
