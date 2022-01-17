@@ -29,7 +29,8 @@ import { fadeInUp, stagger } from '../data/animation';
 const Home: NextPage = () => {
   const resumeUrl =
     'https://drive.google.com/file/d/1HI1Eb2yF3QnbQMjIVCUK8A43eEkNFdn_/view?usp=sharing';
-  const phonenum = '+213666095895';
+  // const phonenum = '+213666095895';
+  const phonenum = '+971524166455';
   const socialClassname = () => {
     return 'w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 xl:w-26  xl:h-26 3xl:w-32 3xl:h-32';
   };
