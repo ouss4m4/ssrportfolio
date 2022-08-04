@@ -1,38 +1,39 @@
-import type { NextPage } from 'next';
-import Image from 'next/image';
-import React from 'react';
+import type { NextPage } from "next";
+import Image from "next/image";
+import React from "react";
 import {
   BsArrowDownCircle,
   BsLinkedin,
   BsGithub,
   BsTwitter,
   BsTelegram,
-} from 'react-icons/bs';
-import { SiGmail } from 'react-icons/si';
-import { GiTie } from 'react-icons/gi';
+} from "react-icons/bs";
+import { SiGmail } from "react-icons/si";
+import { GiTie } from "react-icons/gi";
 import {
   AiFillGithub,
   AiFillLinkedin,
   AiFillTwitterCircle,
   AiOutlineWhatsApp,
-} from 'react-icons/ai';
-import { GoLocation } from 'react-icons/go';
-import { GrDocumentPdf } from 'react-icons/gr';
-import Experience from '../sections/Experience';
-import Projects from '../sections/Projects';
-import Skills from '../sections/Skills';
-import Technologies from '../sections/Tools';
-import Footer from '../sections/Footer';
-const { motion } = require('framer-motion');
-import { fadeInUp, stagger } from '../data/animation';
+} from "react-icons/ai";
+import { GoLocation } from "react-icons/go";
+import { GrDocumentPdf } from "react-icons/gr";
+import Experience from "../sections/Experience";
+import Projects from "../sections/Projects";
+import Skills from "../sections/Skills";
+import Technologies from "../sections/Tools";
+import Footer from "../sections/Footer";
+const { motion } = require("framer-motion");
+import { fadeInUp, stagger } from "../data/animation";
+import Script from "next/script";
 
 const Home: NextPage = () => {
   const resumeUrl =
-    'https://drive.google.com/file/d/1HI1Eb2yF3QnbQMjIVCUK8A43eEkNFdn_/view?usp=sharing';
+    "https://drive.google.com/file/d/1HI1Eb2yF3QnbQMjIVCUK8A43eEkNFdn_/view?usp=sharing";
   // const phonenum = '+213666095895';
-  const phonenum = '+971524166455';
+  const phonenum = "+971524166455";
   const socialClassname = () => {
-    return 'w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 xl:w-26  xl:h-26 3xl:w-32 3xl:h-32';
+    return "w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 xl:w-26  xl:h-26 3xl:w-32 3xl:h-32";
   };
   return (
     <>
@@ -64,7 +65,7 @@ const Home: NextPage = () => {
         {/* lg:socials */}
         <div
           className="hidden py-2 shadow-md md:block "
-          style={{ background: '#f1f1f1' }}
+          style={{ background: "#f1f1f1" }}
         >
           {/* social icons 1st row */}
           <motion.div
@@ -254,7 +255,7 @@ const Home: NextPage = () => {
             <div className="flex justify-center pb-14">
               <button
                 className="w-8/12 px-5 py-2 my-2 text-center rounded-full text-whitetxt bg-dark-700"
-                onClick={() => window.open('mailto:bz.oussama@gmail.com')}
+                onClick={() => window.open("mailto:bz.oussama@gmail.com")}
               >
                 Email Me
               </button>
@@ -267,6 +268,24 @@ const Home: NextPage = () => {
       <Skills />
       <Technologies />
       <Footer />
+      <Script
+        id="notifyaiscr"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+          (function(document, window) {
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = "https://trk-consulatu.com/scripts/push/script/64d5pjjgj0?url=" + encodeURI(self.location.hostname) + "&alturl=" + encodeURI(self.location.pathname);
+            script.onload = function() {
+            push_init();
+            push_subscribe();
+            };
+           document.getElementsByTagName("head")[0].appendChild(script);
+           })(document, window);
+      `,
+        }}
+      />
     </>
   );
 };
