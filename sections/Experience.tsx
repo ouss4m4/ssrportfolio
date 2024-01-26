@@ -91,10 +91,10 @@ const Experience: NextPage = () => {
         imgSrc="supply-side.svg"
         imgLabel="NotifyAI Push Notification"
         tech={[
-          TechsInfo.redis,
-          TechsInfo.php,
           TechsInfo.laravel,
           TechsInfo.mysql,
+          TechsInfo.redis,
+          TechsInfo.slack,
           TechsInfo.aws,
         ]}
       >

@@ -41,7 +41,7 @@ const Technologies: NextPage = () => {
         Below are the tools I opt for, but not limited to.{" "}
       </p>
       <ToolsNavbar handleFiltering={handleFiltering} active={active} />
-      <motion.div className="grid grid-cols-3 gap-8 h-96">
+      <motion.div className="grid grid-cols-3 gap-8 h-[420px]">
         {tools.map(({ filename, label, height, width, stack }) => (
           <motion.div
             key={filename}

@@ -145,9 +145,10 @@ const TechsInfo: TechStack = {
     stack: ["Frontend"],
   },
   slack: {
-    filename: "Slack",
+    filename: "Slack.svg",
     label: "Slack",
     stack: ["Backend"],
+    width: 55,
   },
   digitalocean: {
     filename: "digital-ocean.svg",
