@@ -133,6 +133,43 @@ const TechsInfo: TechStack = {
     width: 190,
     stack: ["Devops"],
   },
+  laravel: {
+    filename: "Laravel.svg",
+    label: "Laravel",
+    stack: ["Backend"],
+    width: 100,
+  },
+  livewire: {
+    filename: "Livewire.svg",
+    label: "Live Wire",
+    stack: ["Frontend"],
+  },
+  slack: {
+    filename: "Slack",
+    label: "Slack",
+    stack: ["Backend"],
+  },
+  digitalocean: {
+    filename: "digital-ocean.svg",
+    label: "Digital Ocean",
+    stack: ["Backend"],
+  },
+  tailwind: {
+    filename: "tailwind.svg",
+    label: "Tail Wind",
+    stack: ["Frontend"],
+  },
+  mysql: {
+    filename: "mysql.svg",
+    label: "MySql",
+    stack: ["Backend"],
+    width: 70,
+  },
+  php: {
+    filename: "php.svg",
+    label: "PHP",
+    stack: ["Backend"],
+  },
 };
 
 export default TechsInfo;
