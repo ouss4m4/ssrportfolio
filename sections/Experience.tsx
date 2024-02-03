@@ -30,7 +30,7 @@ const Experience: NextPage = () => {
             className="block font-bold tracking-widest cursor-pointer font-lines 3xl:text-lg"
           >
             <span className="pr-8 italic font-bold tracking-wide text-md">
-              • Aug 2023 - Today
+              • Feb 2022 - Today
             </span>
           </a>
           <a
