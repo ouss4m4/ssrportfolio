@@ -29,7 +29,7 @@ import Script from "next/script";
 
 const Home: NextPage = () => {
   const resumeUrl =
-    "https://drive.google.com/file/d/1HI1Eb2yF3QnbQMjIVCUK8A43eEkNFdn_/view?usp=sharing";
+    "https://drive.google.com/file/d/17Q3PA3nGF10A66F4PlB1cqKuB4290ukM/view?usp=sharing";
   // const phonenum = '+213666095895';
   const phonenum = "+971523442873";
   const socialClassname = () => {
